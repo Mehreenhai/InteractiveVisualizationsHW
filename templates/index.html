@@ -9,26 +9,38 @@
   <title>Belly Button Biodiversity</title>
   
 </head>
-<body>
+<boxsdy>
   <div class="container">
     <div class="jumbotron text-center">
       <h1>Belly Button Biodiversity Dashboard</h1>
       <p>Use the interactive charts below to explore the dataset!</p>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h3>Look at all of the current pet pals!</h3>
-        <div id="plot"></div>
-      </div>
-      <div class="col-md-12">
-        <h3><a href="#">Add your pet here</a></h3>
-      </div>
-    </div>
   </div>
+  <div class="container">
+      <div class="row"> 
 
-  <select id="selDataset" onchange="optionChanged(this.value)"></select>
-  <div id="pie"></div>
-  
+          <div class="col-md-2">
+            <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          </div>
+
+          <div class="col-md-4">
+            <div id="pie"></div>
+          </div>       
+
+      </div>
+      
+      <div class="col-md-1" style="position:relative">
+          <div id="text_box" style="height:120px;width:100px">Sample Metadata</div>
+          
+      </div>
+
+    <div class="row">    
+        <div class="col-md-4">
+          <div id="bubble"></div>
+        </div>
+    </div>
+
+</div>
   
 
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
